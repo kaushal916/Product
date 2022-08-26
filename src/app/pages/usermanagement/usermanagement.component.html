@@ -1,0 +1,80 @@
+
+<!-- <div class="row pt-5"> -->
+<div>
+    <h3>
+        Create New User
+    </h3>
+    <div class="card ">
+        <div class="card-body mx-2">
+            <div class=" ">
+                <form [formGroup]="registerFormGroup" (ngSubmit)="registrationUserSubmit(registerFormGroup.value)">
+                    <div class="form-group">
+                        <label class="d-flex text-align-left">
+                            Email address:
+                        </label>
+                        <input type="text" placeholder="Enter email" name="email" class="px-3 p-2 form-control rounded" formControlName="email">
+                        <small class="d-flex text-align-left text-danger" *ngIf="email_validate && email_validate.invalid && email_validate.touched">
+                            Email is required! 
+                        </small>
+                    </div>
+                    <div class="form-group mt-4">
+                        <label class="d-flex text-align-left">
+                            First Name:
+                        </label>
+                        <input type="text" placeholder="Enter first name" name="f_name" class="px-3 p-2 form-control rounded" formControlName="f_name">
+                        <small class="d-flex text-align-left text-danger" *ngIf="name_validate && name_validate.invalid && name_validate.touched">
+                            Name is required!
+                        </small>
+                        
+                    </div>
+                    <div class="form-group mt-4">
+                        <label class="d-flex text-align-left">
+                            Last Name:
+                        </label>
+                        <input type="text" placeholder="Enter last name" name="l_name" class="p-2 px-3 form-control rounded" formControlName="l_name">
+                    </div>
+                    <div class="form-group mt-4">
+                        <label class="d-flex text-align-left">
+                            User group:
+                        </label>
+                        <select class="form-select form-control" formControlName="user_group">
+                            <option value="" class="text-muted" disabled selected hidden>Choose user group </option>
+                            <option *ngFor="let ugroup of usergroup" [ngValue]="ugroup.id">
+                                {{ ugroup.group_name }}
+                              </option>
+                        </select>
+                        <small class="d-flex text-align-left text-danger" *ngIf="user_group_validate && user_group_validate.invalid && user_group_validate.touched">
+                            User group is required!
+                        </small>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <div class="d-flex justify-content-between">
+                            <label class="text-start">
+                                Password:
+                            </label>
+                        </div>
+                        <input type="password" placeholder="Enter password" name="password" class="px-3 p-2 form-control rounded" formControlName="password">
+                        <small class="d-flex text-align-left text-danger" *ngIf="password_validate && password_validate.invalid && password_validate.touched">Password is required!</small>
+                    </div>
+                    <div class="form-group mt-4">
+                        <div class="d-flex justify-content-between">
+                            <label>
+                                <span class="text-start">
+                                    Confirm Password:
+                                </span>
+                            </label>
+                        </div>
+                        <input type="password" placeholder="Enter password again" name="cpassword" class="px-3 p-2 form-control rounded" formControlName="cpassword">
+                        <small class="d-flex text-align-left text-danger" *ngIf="cpassword_validate && cpassword_validate.invalid && cpassword_validate.touched">
+                            Confirm Password is required!
+                        </small >
+                    </div>
+                    <div  class="mt-4">
+                        <button class="btn w-100 btn-primary " type="submit" [disabled]="registerFormGroup.invalid" >Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

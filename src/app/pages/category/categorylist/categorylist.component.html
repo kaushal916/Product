@@ -1,0 +1,30 @@
+
+<nb-card>
+    <nb-card-header>
+        <div class="row">
+            <div class="col pt-2 h5">
+                Category
+            </div>
+            <div class="float-right">
+                <button nbButton status="primary"  [routerLink]="['/pages/subcategory']" size="small">Sub-Category</button>
+            </div>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <table  class="table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Modified</th>
+            </tr>
+            <tr *ngFor="let category of listcategory">
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.status }}</td>
+                <td>{{ category.updated_at }}</td>
+            </tr>
+        </table>
+                    
+      </nb-card-body>
+</nb-card>
