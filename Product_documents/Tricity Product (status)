@@ -1,0 +1,121 @@
+Product tricity 
+
+1.) Designed ER diagram of Database.
+2.) Created Admin panel flow diagram.
+3.) All tables are created in SQLAlchemy.( SQLAlchemy Is the default database of the FastAPI  framework with will help to link PostgreSQL )
+
+4.) Created CRUD APIs  for the following tables:
+-----------------------------------------------------------
+
+- Business_categorys  - With proper Json response with validation. 
+- Business_sub_categorys - With proper Json response with validation. 
+- Country - With proper Json response with validation. 
+- state - With proper Json response with validation. 
+- city -  With proper Json response with validation. 
+- Businesses - With proper Json response with validation. 
+- Business_faqs  - With proper Json response with validation. 
+- Business_products  - With proper Json response with validation. 
+- Amenities_services - With proper Json response with validation. 
+- Business_amenities_services - With proper Json response with validation. 
+- Payment_methods  - With proper Json response with validation. 
+- Reaction_types - With proper Json response with validation. 
+- Business_accepted_payment_methods 
+- User_group_types- With proper Json response with validation. 
+- User - With proper Json response with validation. 
+- api/token (for login) - With proper Json response with validation. 
+- Sign_up  - With proper Json response with validation. 
+- Forgot password  - With proper Json response with validation. 
+- validation password  - With proper Json response with validation. 
+- set password form  -With proper Json response with validation. 
+- User_detail - With proper Json response with validation. 
+- Business_reaction - With proper Json response with validation. 
+- Business_ratings - With proper Json response with validation. 
+- Business_reviews - With proper Json response with validation. 
+- Website_link - With proper Json response with validation. 
+- Social_media - With proper Json response with validation. 
+- Business_social_website_links - With proper Json response with validation. 
+- Business_images- - With proper Json response with validation. 
+- Business_working_hours - With proper Json response with validation. 
+- Tags - With proper Json response with validation.
+- Business_tags - With proper Json response with validation.
+- Business_Professionals - With proper Json response with validation.
+- Business_phone_numbers - With proper Json response with validation.
+
+
+
+
+
+
+5.) Listing file of all APIs with the following details: Done 
+-Requests
+-API
+-Status code    
+-JSON data / Form data  send 
+-JSON data receive
+
+5.) Add a new API in every table. (complete)
+6.) Add user authentication for all tables.     (complete)
+
+
+
+Authentication 
+--------------------
+
+signup with JWT authentication 
+login  With Jwt Token
+
+
+befor signin you can't able to access API 
+
+
+change_password / password_change after login 
+-------------------------------------------------
+Manually write code for logout, i am not use any predefind function to this.
+first  fetch the user email, and fetch data from User table
+convert the password to hashing password 
+then update the password  
+
+
+forgate password with otp varification.
+---------------------------------------
+First i check the input email is valid or not. 
+if email is valid then the email is exist or not in out db.
+if exist then i send a otp to this email.
+The link is valid for 3 minutes. 
+then validate the otp, id  otp match successfully then the user can create a new password. 
+
+
+
+
+
+Issue comming in project. 
+
+-------------------------
+Try except in every fetch.   Done
+status = false do not fetch from table.   Done
+
+
+
+Pending 
+--------
+Json field 
+
+
+changes 
+--------
+
+user table 
+ - login_exp_time column add 
+ - statsu column add 
+Category_table 
+ - name field not unique 
+ Sub_category_table 
+ - name fields not unique 
+
+ 
+ 
+
+
+
+
+

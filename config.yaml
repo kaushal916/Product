@@ -1,0 +1,28 @@
+
+
+# Database configuration.
+database : {
+  username : talentelgia,
+  password : talentelgia,
+  db : product_db
+
+}
+
+
+
+# forgate_password time limit 
+forgot_password : {
+  timelimit : 3,
+}
+
+
+Password_length : {
+  min_length : '6' ,
+  max_length : '100'
+}
+
+# 15 meance 15 days 
+Login_expire_time : {
+  time : 15 
+}
+# We need this data in list data type for passing data into front-end
